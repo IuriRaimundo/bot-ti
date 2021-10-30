@@ -1,6 +1,6 @@
 /* Main file */
 
-const mensages = require('./mensages.js');
+const mensages = require('./messages.js');
 const { Client, Intents } = require('discord.js');
 
 // Create a new client instance
