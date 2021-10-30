@@ -1,5 +1,3 @@
-/* Main file */
-
 const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
 
