@@ -1,3 +1,5 @@
+/* Main file */
+const mensages = require('./messages.js');
 const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
 
