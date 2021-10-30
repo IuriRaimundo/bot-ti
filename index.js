@@ -1,6 +1,6 @@
 /* Main file */
 
-const mensages = require('./mensages.js');
+const mensages = require('./messages.js');
 const { Client, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
