@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
 
-const mensages = require('./messages.js');
+const messages = require('./messages.js');
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ client.once('ready', () => {
     console.log('Ready!');
 
     // Set a status like "Playing"
-    client.user.setActivity("Já sei o que vais dizer!");
+    client.user.setActivity(messages.statusMessage);
 });
 
 client.on('interactionCreate', async interaction => {

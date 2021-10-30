@@ -11,7 +11,10 @@ const materia = {
     estruturasDeControlo: "Estruturas de controlo são ...",
 }
 
+const statusMessage = "Já sei o que vais dizer!!";
+
 module.exports = {
     repostaDuvidas,
-    materia
+    materia,
+    statusMessage
 }
