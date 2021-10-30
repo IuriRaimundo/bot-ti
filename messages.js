@@ -12,6 +12,6 @@ const materia = {
 }
 
 module.exports = {
-    respostaDuvidas,
+    repostaDuvidas,
     materia
 }
