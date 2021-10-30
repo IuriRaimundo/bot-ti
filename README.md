@@ -1,5 +1,6 @@
 # Bot TI
 
+- https://discordjs.guide
 ## Notes
 
 - Install dependencies with `yarn`
