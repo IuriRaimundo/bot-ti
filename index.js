@@ -1,7 +1,11 @@
 /* Main file */
 
-const mensages = require('./messages.js');
+const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
+
+const mensages = require('./messages.js');
+
+dotenv.config();
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
