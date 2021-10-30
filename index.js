@@ -11,6 +11,9 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
     console.log('Ready!');
+
+    // Set a status like "Playing"
+    client.user.setActivity("Já sei o que vais dizer!");
 });
 
 client.on('interactionCreate', async interaction => {
