@@ -1,9 +1,10 @@
 /* Main file */
+const chalk = require("chalk");
 const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
+
 const commands = require('./commands/commands');
 const { updateStatusMessage } = require("./utils/updateStatusMessage");
-
 const messages = require('./messages.js');
 
 dotenv.config();
@@ -15,7 +16,7 @@ const client = new Client({
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
-    console.log('Ready!');
+    console.log(chalk.green('Ready!'));
 
     // Set a status like "Playing"
     setInterval(() => client.user.setActivity(updateStatusMessage()), 10000);
