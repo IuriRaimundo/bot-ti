@@ -1,10 +1,10 @@
 /* Main file */
-const chalk = require("chalk");
-const dotenv = require("dotenv");
+const chalk = require('chalk');
+const dotenv = require('dotenv');
 const { Client, Intents } = require('discord.js');
 
 const commands = require('./commands/commands');
-const { updateStatusMessage } = require("./utils/updateStatusMessage");
+const { updateStatusMessage } = require('./utils/updateStatusMessage');
 const messages = require('./messages.js');
 
 dotenv.config();
@@ -22,7 +22,7 @@ client.once('ready', () => {
     setInterval(() => client.user.setActivity(updateStatusMessage()), 10000);
 });
 
-client.on("messageCreate", message => {
+client.on('messageCreate', message => {
     const lowerCaseMessage = message.content.toLowerCase();
 
     if (lowerCaseMessage.includes('duvida') || lowerCaseMessage.includes('dúvida')) {
