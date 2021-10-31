@@ -1,14 +1,16 @@
 /* Main file */
-const mensages = require('./messages.js');
 const dotenv = require("dotenv");
 const { Client, Intents } = require('discord.js');
+const commands = require('./commands/commands');
 
 const messages = require('./messages.js');
 
 dotenv.config();
 
 // Create a new client instance
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Client({
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES],
+});
 
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
@@ -18,19 +20,14 @@ client.once('ready', () => {
     client.user.setActivity(messages.statusMessage);
 });
 
-client.on('interactionCreate', async interaction => {
-    if (!interaction.isCommand()) return;
+client.on("messageCreate", message => {
+    const lowerCaseMessage = message.content.toLowerCase();
 
-    const { commandName } = interaction;
-
-    if (commandName === 'ping') {
-        await interaction.reply('Pong!');
-    } else if (commandName === 'server') {
-        await interaction.reply('Server info.');
-    } else if (commandName === 'user') {
-        await interaction.reply('User info.');
+    if (lowerCaseMessage.includes('duvida') || lowerCaseMessage.includes('dúvida'))
+    {
+        commands.duvida(message);
+        return;
     }
 });
 
-// Login to Discord with your client's token
 client.login(process.env.TOKEN);
