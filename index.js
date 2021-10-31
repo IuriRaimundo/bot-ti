@@ -23,6 +23,11 @@ client.once('ready', () => {
 client.on("messageCreate", message => {
     const lowerCaseMessage = message.content.toLowerCase();
 
+    if (lowerCaseMessage === 'help' || lowerCaseMessage === 'ajuda')
+    {
+        commands.help(message);
+        return;
+    }
     if (lowerCaseMessage.includes('duvida') || lowerCaseMessage.includes('dúvida'))
     {
         commands.duvida(message);
