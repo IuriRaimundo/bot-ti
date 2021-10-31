@@ -1,4 +1,6 @@
-# Bot TI
+# Bot TI (aka Távora Bot)
+
+## Useful guides and links
 
 - https://discordjs.guide
 
