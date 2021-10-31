@@ -11,10 +11,10 @@ const materia = {
     estruturasDeControlo: "Estruturas de controlo são ...",
 }
 
-const statusMessage = "Já sei o que vais dizer!!";
+const statusMessages = ["Já sei o que vais dizer!", "Feito pelos melhores alunos!", "Ajuda: /help"];
 
 module.exports = {
     respostaDuvidas,
     materia,
-    statusMessage
+    statusMessages
 }
