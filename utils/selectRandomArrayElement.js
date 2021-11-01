@@ -1,5 +1,7 @@
 'use-strict'
 
+const chalk = require('chalk');
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -9,7 +11,7 @@ function selectRandomArrayElement(array) {
 
     // Type checking
     if (!Array.isArray(array)) {
-        console.log('Error at function selectRandomArrayElement, the "array" parameter should be of type: Array.');
+        console.log(chalk.red('Error at function selectRandomArrayElement, the "array" parameter should be of type: Array.'));
         return;
     }
 
