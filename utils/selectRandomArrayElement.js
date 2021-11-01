@@ -1,10 +1,7 @@
 'use-strict'
 
 const chalk = require('chalk');
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
+const getRandomInt = require('./getRandomInt');
 
 function selectRandomArrayElement(array) {
     let length, index;
