@@ -4,10 +4,10 @@ const respostaDuvidas = [
     "Não o fazes, encontras outra forma.",
 ]
 
-const materia = {
-    tiposDeDados: "",
-    estruturasDeDecisao: "",
-    estruturasDeRepeticao: "",
+const textoMateria = {
+    tiposDeDados: "Tipos de dados ...",
+    estruturasDeDecisao: "Estruturas de decisão ...",
+    estruturasDeRepeticao: "Estruturas de repetição ...",
     estruturasDeControlo: "Estruturas de controlo são ...",
 }
 
@@ -15,6 +15,6 @@ const statusMessages = ["Já sei o que vais dizer!", "Feito pelos melhores aluno
 
 module.exports = {
     respostaDuvidas,
-    materia,
+    textoMateria,
     statusMessages
 }
