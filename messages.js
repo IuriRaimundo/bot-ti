@@ -34,6 +34,7 @@ const textoMateria = {
         .addField(`**duvida + mensagem**`, 'Responder a dúvidas')
         .setTimestamp()
         .setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png'),
+        
     estruturasDeRepeticao: new Discord.MessageEmbed()
         .setColor('#77185e')
         .setTitle('Estruturas de repetição')
@@ -55,7 +56,7 @@ const textoMateria = {
         .setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png'),
 }
 
-const statusMessages = ["Já sei o que vais dizer!", "Feito pelos melhores alunos!", "Ajuda: /help"];
+const statusMessages = ["Já sei o que vais dizer!", "Não adormeças", "Feito pelos melhores alunos!", "Ajuda: /help"];
 
 const helpEmbed = new Discord.MessageEmbed()
   .setColor('#77185e')

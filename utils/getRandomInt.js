@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 const chalk = require("chalk");
 
@@ -12,8 +12,7 @@ function getRandomInt(max)
     }
     else
     {
-        console.log(chalk.red('Error at function getRandomInt, parameter "max" should be of type "number".'));
-        return 0;
+        throw Error(chalk.red('Error at function getRandomInt, parameter "max" should be of type "number".'))
     }
 }
 

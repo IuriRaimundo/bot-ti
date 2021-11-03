@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 const {textoMateria} = require('../messages');
 const selectRandomArrayElement = require('../utils/selectRandomArrayElement');

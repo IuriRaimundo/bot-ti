@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 const chalk = require('chalk');
 const dotenv = require('dotenv');
@@ -6,7 +6,6 @@ const { Client, Intents } = require('discord.js');
 
 const commands = require('./commands/commands');
 const { updateStatusMessage } = require('./utils/updateStatusMessage');
-const selectRandomArrayElement = require('./utils/selectRandomArrayElement');
 
 dotenv.config();
 

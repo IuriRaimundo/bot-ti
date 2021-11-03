@@ -1,6 +1,5 @@
 'use strict'
 
-const Discord = require('discord.js');
 const { helpEmbed } = require('../messages');
 
 function help(message) {
