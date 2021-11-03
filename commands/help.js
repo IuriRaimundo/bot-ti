@@ -12,6 +12,6 @@ const embed = new Discord.MessageEmbed()
   .setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png');
 
 function help(message) {
-    message.channel.send({ embeds: [embed] });
+  message.channel.send({ embeds: [embed] });
 }
-  module.exports = help;
+module.exports = help;
