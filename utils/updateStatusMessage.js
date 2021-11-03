@@ -1,14 +1,14 @@
 // Updates the bot status with a dynamic message
 
-const selectRandomArrayElement = require('./selectRandomArrayElement')
-const { statusMessages } = require('../messages')
+const selectRandomArrayElement = require('./selectRandomArrayElement');
+const { statusMessages } = require('../messages');
 
 function updateStatusMessage() {
-	const message = selectRandomArrayElement(statusMessages)
+	const message = selectRandomArrayElement(statusMessages);
 	// console.log(chalk.blue('New Status Message: ') + message);
-	return message
+	return message;
 }
 
 module.exports = {
 	updateStatusMessage,
-}
+};

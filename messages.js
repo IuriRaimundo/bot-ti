@@ -1,10 +1,10 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 
 const respostaDuvidas = [
 	'Não perguntem detalhes, perguntem sobre o que eu disse!',
 	'Não me digas nada  que eu sei o que é que vais dizer.',
 	'Não o fazes, encontras outra forma.',
-]
+];
 
 const textoMateria = {
 	tiposDeDados: new Discord.MessageEmbed()
@@ -54,9 +54,9 @@ const textoMateria = {
 		.addField('**duvida + mensagem**', 'Responder a dúvidas')
 		.setTimestamp()
 		.setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png'),
-}
+};
 
-const statusMessages = ['Já sei o que vais dizer!', 'Não adormeças', 'Feito pelos melhores alunos!', 'Ajuda: /help']
+const statusMessages = ['Já sei o que vais dizer!', 'Não adormeças', 'Feito pelos melhores alunos!', 'Ajuda: /help'];
 
 const helpEmbed = new Discord.MessageEmbed()
 	.setColor('#77185e')
@@ -67,11 +67,11 @@ const helpEmbed = new Discord.MessageEmbed()
 	.addField('**duvida + mensagem**', 'Responder a dúvidas')
 	.addField('**ajuda / help**', 'Mostra esta mensagem')
 	.setTimestamp()
-	.setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png')
+	.setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png');
 
 module.exports = {
 	respostaDuvidas,
 	textoMateria,
 	statusMessages,
 	helpEmbed
-}
+};
