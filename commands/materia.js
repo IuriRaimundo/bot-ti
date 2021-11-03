@@ -18,7 +18,7 @@ function materia(message)
     if (message.content === 'materia')
     {
         let key = selectRandomArrayElement(keys)
-        message.reply(keyMappings[key]);
+        message.channel.send({ embeds: [keyMappings[key]]});
         return;
     }
 
@@ -27,7 +27,7 @@ function materia(message)
     {
         if (message.content.includes(keys[i]))
         {
-            message.reply(keyMappings[keys[i]]);
+            message.channel.send({ embeds: [keyMappings[keys[i]]]});
             return;
         }
     }
