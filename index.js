@@ -6,6 +6,7 @@ const { Client, Intents } = require('discord.js');
 
 const commands = require('./commands/commands');
 const { updateStatusMessage } = require('./utils/updateStatusMessage');
+const getRandomInt = require('./utils/getRandomInt');
 
 dotenv.config();
 
@@ -22,22 +23,35 @@ client.once('ready', () => {
 });
 
 client.on('messageCreate', message => {
-	const lowerCaseMessage = message.content.toLowerCase();
+    const lowerCaseMessage = message.content.toLowerCase();
 
-	if (lowerCaseMessage === 'help' || lowerCaseMessage === 'ajuda') {
-		commands.help(message);
-		return;
-	}
+    //  Execute the 'ralhar' command by chance on every message sent.
+    if (getRandomInt(5) == 1)
+    {
+        commands.ralhar(message);
+    }
 
-	if (lowerCaseMessage.includes('duvida') || lowerCaseMessage.includes('dúvida')) {
-		commands.duvida(message);
-		return;
-	}
+    if (lowerCaseMessage === 'help' || lowerCaseMessage === 'ajuda') {
+        commands.help(message);
+        return;
+    }
 
-	if (lowerCaseMessage.includes('materia')) {
-		commands.materia(message);
-		return;
-	}
+    if (lowerCaseMessage.includes('duvida') || lowerCaseMessage.includes('dúvida')) {
+        commands.duvida(message);
+        return;
+    }
+
+    if (lowerCaseMessage.includes('materia'))
+    {
+        commands.materia(message);
+        return;
+    }
+
+    if (lowerCaseMessage.includes('mascara'))
+    {
+        commands.mascara(message);
+        return;
+    }
 });
 
 client.login(process.env.TOKEN);

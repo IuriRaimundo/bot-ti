@@ -1,10 +1,12 @@
 const Discord = require('discord.js');
 
 const respostaDuvidas = [
-	'Não perguntem detalhes, perguntem sobre o que eu disse!',
-	'Não me digas nada  que eu sei o que é que vais dizer.',
-	'Não o fazes, encontras outra forma.',
-];
+    "Não perguntem detalhes, perguntem sobre o que eu disse!",
+    "Não me digas nada que eu sei o que é que vais dizer.",
+    "Não o fazes, encontras outra forma.",
+    "Já vais entender porquê.",
+    "Já vamos falar disso okay?",
+]
 
 const textoMateria = {
 	tiposDeDados: new Discord.MessageEmbed()
@@ -69,9 +71,19 @@ const helpEmbed = new Discord.MessageEmbed()
 	.setTimestamp()
 	.setFooter('Bot por Engenheiros da Deloitte', 'https://i.imgur.com/1LHooWF.png');
 
+const ralharMessages = [
+    "Calem-se!",
+    "Querem ir para rua?",
+    "Mas eu estou aqui a fazer alguma figura?",
+    "Os do pós laboral tiram melhores notas que vocês.",
+    "Não estou aqui a contar andotas!",
+    "Se eu vir uma variável global, levam zero.",
+]
+
 module.exports = {
-	respostaDuvidas,
-	textoMateria,
-	statusMessages,
-	helpEmbed
-};
+    respostaDuvidas,
+    textoMateria,
+    statusMessages,
+    helpEmbed,
+    ralharMessages
+}

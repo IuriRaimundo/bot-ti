@@ -14,6 +14,8 @@ function selectRandomArrayElement(array) {
 	// Get array length
 	length = array.length;
 
+    // Get a random integer between 0 and the length
+    index = getRandomInt(length);
 	// Get a random integer between 0 and the length
 	index = getRandomInt(length);
 
