@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const chalk = require('chalk');
 const dotenv = require('dotenv');
@@ -12,14 +12,14 @@ dotenv.config();
 
 // Create a new client instance
 const client = new Client({
-    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES],
+	intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES],
 });
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
-    console.log(chalk.green('\nBot is running!'));
+	console.log(chalk.green('\nBot is running!'));
 
-    // Set a status like "Playing"
-    setInterval(() => client.user.setActivity(updateStatusMessage()), 10000);
+	// Set a status like "Playing"
+	setInterval(() => client.user.setActivity(updateStatusMessage()), 10000);
 });
 
 client.on('messageCreate', message => {
