@@ -15,7 +15,7 @@ function selectRandomArrayElement(array) {
     length = array.length;
 
     // Get a random integer between 0 and the length
-    index = getRandomInt('a');
+    index = getRandomInt(length);
 
     // Return a message from the messages array using that random integer
     return array[index];

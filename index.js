@@ -6,6 +6,7 @@ const { Client, Intents } = require('discord.js');
 
 const commands = require('./commands/commands');
 const { updateStatusMessage } = require('./utils/updateStatusMessage');
+const getRandomInt = require('./utils/getRandomInt');
 
 dotenv.config();
 
@@ -24,6 +25,12 @@ client.once('ready', () => {
 client.on('messageCreate', message => {
     const lowerCaseMessage = message.content.toLowerCase();
 
+    //  Execute the 'ralhar' command by chance on every message sent.
+    if (getRandomInt(5) == 1)
+    {
+        commands.ralhar(message);
+    }
+
     if (lowerCaseMessage === 'help' || lowerCaseMessage === 'ajuda') {
         commands.help(message);
         return;
@@ -37,7 +44,13 @@ client.on('messageCreate', message => {
     if (lowerCaseMessage.includes('materia'))
     {
         commands.materia(message);
-        return
+        return;
+    }
+
+    if (lowerCaseMessage.includes('mascara'))
+    {
+        commands.mascara(message);
+        return;
     }
 });
 
