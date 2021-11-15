@@ -1,6 +1,7 @@
 'use strict';
 
 const chalk = require('chalk');
+const log = require('./log');
 
 // Returns random integer 
 function getRandomInt(max) {
@@ -9,7 +10,11 @@ function getRandomInt(max) {
 		return Math.floor(Math.random() * max);
 	}
 	else {
-		throw Error(chalk.red('Error at function getRandomInt, parameter "max" should be of type "number".'));
+        const error = 'Error at function getRandomInt, parameter "max" should be of type "number".';
+        log(error)
+		.finally(() => {
+            throw Error(chalk.red(error));
+        });
 	}
 }
 

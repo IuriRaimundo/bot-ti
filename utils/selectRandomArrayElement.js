@@ -8,7 +8,11 @@ function selectRandomArrayElement(array) {
 
 	// Type checking
 	if (!Array.isArray(array)) {
-		throw Error(chalk.red('Error at function selectRandomArrayElement, the "array" parameter should be of type: Array.'));
+		const error = 'Error at function selectRandomArrayElement, the "array" parameter should be of type: Array.';
+		log(error)
+		.finally(() => {
+            throw Error(chalk.red(error));
+        });
 	}
 
 	// Get array length
